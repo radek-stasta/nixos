@@ -11,10 +11,10 @@ My NixOS system
 
 wait for installation to finish, set root password and reboot
 
-- clone nixos repository to user profile with gh-cli:)
-  nix-shell -p gitAndTools.gh
-  gh auth login
-  gh repo clone nixos
+- clone nixos repository to user profile with gh-cli:
+    - nix-shell -p gitAndTools.gh
+    - gh auth login
+    - gh repo clone nixos
 - sudo rm -rf /install
 
 # upgrade system
