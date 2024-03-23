@@ -139,6 +139,7 @@
     description = "rstasta";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      gh
     ];
   };
 
@@ -149,7 +150,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
-    gh
     google-chrome
     jetbrains.webstorm
     neovim
