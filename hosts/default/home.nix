@@ -63,6 +63,12 @@ in
       recursive = true;
     };
 
+    # Hyprpaper
+    "${config.home.homeDirectory}/.config/hyprpaper" = {
+      source = ../../dotfiles/hyprpaper;
+      recursive = true;
+    };
+
     # Rofi
     "${config.home.homeDirectory}/.config/rofi" = {
       source = ../../dotfiles/rofi;
@@ -70,7 +76,7 @@ in
     };
 
     # eww
-      "${config.home.homeDirectory}/.config/eww" = {
+    "${config.home.homeDirectory}/.config/eww" = {
       source = ../../dotfiles/eww;
       recursive = true;
     };
