@@ -49,10 +49,13 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    "${config.home.homeDirectory}/.config/hypr/hyprland.conf" = {
-      source = ../../dotfiles/hyprland.conf;
+
+    # Hyprland
+    "${config.home.homeDirectory}/.config/hypr" = {
+      source = ../../dotfiles/hypr;
     };
 
+    # Rofi
     "${config.home.homeDirectory}/.config/rofi" = {
       source = ../../dotfiles/rofi;
       recursive = true;
