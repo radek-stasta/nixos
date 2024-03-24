@@ -192,6 +192,7 @@
     font-awesome
     noto-fonts
     iosevka
+    source-code-pro
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -5,7 +5,7 @@ button {
 
 .topbar0, .topbar1, .topbar2 {
     all: unset;
-    font-family: 'Iosevka';
+    font-family: 'Iosevka', serif;
     font-weight: bold;
     font-size: 13px;
 }
@@ -22,6 +22,7 @@ button {
 
 .steam {
     all: unset;
+    font-family: 'Noto Sans', serif;
 }
 
 .steam-new, .steam-upcoming, .steam-trending {
