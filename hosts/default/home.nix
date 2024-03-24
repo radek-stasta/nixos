@@ -52,6 +52,11 @@
     "${config.home.homeDirectory}/.config/hypr/hyprland.conf" = {
       source = ../../dotfiles/hyprland.conf;
     };
+
+    "${config.home.homeDirectory}/.config/rofi" = {
+      source = ../../dotfiles/rofi;
+      recursive = true;
+    };
   };
 
   # Home Manager can also manage your environment variables through
