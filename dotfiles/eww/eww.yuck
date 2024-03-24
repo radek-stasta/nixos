@@ -47,7 +47,7 @@
   `echo " "$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]"%"`)
 (defpoll netSpeed 
   :interval "2s"
-  '~/.venv/bin/python ~/.config/eww/network_speed.py'
+  'python ~/.config/eww/network_speed.py'
 )
 (defpoll activeWindow 
   :interval "2s"
@@ -59,23 +59,23 @@
 )
 (defpoll soundInfo
   :interval "1s"
-  '~/.venv/bin/python ~/.config/eww/sound_info.py'
+  'python ~/.config/eww/sound_info.py'
 )
 (defpoll media
   :interval "2s"
-  '~/.venv/bin/python ~/.config/eww/media_playerctl.py'
+  'python ~/.config/eww/media_playerctl.py'
 )
 (defpoll workspaces0
   :interval "1s"
-  '~/.venv/bin/python ~/.config/eww/workspaces.py 0'
+  'python ~/.config/eww/workspaces.py 0'
 )
 (defpoll workspaces1
   :interval "1s"
-  '~/.venv/bin/python ~/.config/eww/workspaces.py 1'
+  'python ~/.config/eww/workspaces.py 1'
 )
 (defpoll workspaces2
   :interval "1s"
-  '~/.venv/bin/python ~/.config/eww/workspaces.py 2'
+  'python ~/.config/eww/workspaces.py 2'
 )
 
 ;; TOP BAR WINDOW main topbar container
@@ -222,7 +222,7 @@
             :halign "center"
               (button
                 :class "steam-refresh-button"
-                :onclick "~/.venv/bin/python ~/.config/eww/steam_charts.py" 
+                :onclick "python ~/.config/eww/steam_charts.py" 
                 :timeout "5000ms" 
                 ""
               )    

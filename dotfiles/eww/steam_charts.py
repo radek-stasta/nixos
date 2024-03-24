@@ -2,14 +2,14 @@ import os
 from datetime import datetime
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 
 try:
     # NEW
     options = Options()
     options.add_argument('--no-sandbox')
     #options.add_argument("--headless=new")
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Firefox(options=options)
     driver.get("https://steamdb.info/")
     bs = BeautifulSoup(driver.page_source, "html.parser")
 

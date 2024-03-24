@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
-
+let
+  customPython = pkgs.python3.withPackages (ps: with ps; [
+    ps.beautifulsoup4
+    ps.selenium
+  ]);
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -34,6 +39,8 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    customPython
+    pkgs.geckodriver
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -53,16 +60,19 @@
     # Hyprland
     "${config.home.homeDirectory}/.config/hypr" = {
       source = ../../dotfiles/hypr;
+      recursive = true;
     };
 
     # Rofi
     "${config.home.homeDirectory}/.config/rofi" = {
       source = ../../dotfiles/rofi;
+      recursive = true;
     };
 
-    # EWW
+    # eww
       "${config.home.homeDirectory}/.config/eww" = {
       source = ../../dotfiles/eww;
+      recursive = true;
     };
   };
 

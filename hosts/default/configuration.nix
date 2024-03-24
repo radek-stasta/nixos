@@ -184,6 +184,7 @@
     libnotify
     kitty
     rofi-wayland
+    firefox
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
