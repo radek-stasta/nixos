@@ -58,7 +58,11 @@
     # Rofi
     "${config.home.homeDirectory}/.config/rofi" = {
       source = ../../dotfiles/rofi;
-      recursive = true;
+    };
+
+    # EWW
+      "${config.home.homeDirectory}/.config/eww" = {
+      source = ../../dotfiles/eww;
     };
   };
 

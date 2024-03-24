@@ -1,0 +1,40 @@
+button {
+    all: unset;
+    padding: 0 10px;
+}
+
+.topbar0, .topbar1, .topbar2 {
+    all: unset;
+    font-family: 'Iosevka';
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.topbar-box {
+    color: #2E3440;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.active-workspace {
+    border-bottom: 2px solid #8FBCBB;
+}
+
+.steam {
+    all: unset;
+}
+
+.steam-new, .steam-upcoming, .steam-trending {
+    background-color: rgba(46,52,64,0.75);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.steam-refresh-button {
+    all: unset;
+    background: rgba(46,52,64,0.75);
+    border: 0;
+    color: #A3BE8C;
+    padding: 10px;
+    border-radius: 10px;
+}
