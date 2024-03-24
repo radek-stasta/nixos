@@ -100,7 +100,7 @@
         :data netSpeed
         :bg-color "#B48EAD")
       (topbarBox 
-        :data ' ${EWW_TEMPS["ACPITZ_TEMP1"]}°C'
+        :data ' ${EWW_TEMPS["ACPITZ_TEMP1"]}°C'
         :bg-color "#8FBCBB")
     )
     (label
