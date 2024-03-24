@@ -49,6 +49,9 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    "${config.home.homeDirectory}/.config/hypr/hyprland.conf" = {
+      source = ../dotfiles/hyprland.conf;
+    };
   };
 
   # Home Manager can also manage your environment variables through

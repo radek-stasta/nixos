@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
 
   # Enable experimental features
@@ -50,7 +51,7 @@
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  #services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -133,6 +134,22 @@
     };
   };
 
+  # Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rstasta = {
     isNormalUser = true;
@@ -141,6 +158,14 @@
     packages = with pkgs; [
       gh
     ];
+  };
+
+  home-manager = {
+    # also pass inputs to home-manager modules
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "rstasta" = import ./home.nix;
+    };
   };
 
   # Allow unfree packages
@@ -154,6 +179,11 @@
     jetbrains.webstorm
     neovim
     lshw
+    eww
+    dunst
+    libnotify
+    kitty
+    rofi-wayland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
