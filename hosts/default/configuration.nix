@@ -28,6 +28,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable wireguard
+  networking.wireguard.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Prague";
 
@@ -189,7 +192,12 @@
     gnome.nautilus
     nordzy-cursor-theme
     nordzy-icon-theme
+    remmina
   ];
+
+  environment.etc."wireguard/wgEC.conf" = {
+    source = ../../config/wgEC.conf;
+  };
 
   fonts.packages = with pkgs; [
     font-awesome

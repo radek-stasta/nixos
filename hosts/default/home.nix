@@ -91,6 +91,11 @@ in
     "${config.home.homeDirectory}/.icons" = {
       source = ../../dotfiles/icons;
     };
+
+    # Remmina
+    "${config.home.homeDirectory}/.local/share/remmina/build-server.remmina" = {
+      source = ../../config/build-server.remmina;
+    };
   };
 
   # Home Manager can also manage your environment variables through
