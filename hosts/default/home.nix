@@ -138,4 +138,10 @@ in
       background_opacity = "0.8";
     };
   };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
 }
