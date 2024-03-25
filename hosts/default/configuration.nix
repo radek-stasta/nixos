@@ -89,6 +89,9 @@
   # services.xserver.libinput.enable = true;
 
   # NVIDIA
+  # Kernel parameter
+  boot.kernelParams = [ "nvidia-drm.modeset=1" ];
+
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
@@ -224,6 +227,29 @@
   virtualisation.docker.enable = true;
 
   # List services that you want to enable:
+  services.nginx = {
+    enable = true;
+    user = "rstasta";
+    recommendedGzipSettings = true;
+    recommendedOptimisation = true;
+    recommendedProxySettings = true;
+    virtualHosts = {
+      "scada-web" = {
+        listen = [ { addr = "localhost"; port = 81; } ];
+        root = "/var/www/scada-web";
+        locations = {
+          "/" = {
+            index = "index.html";
+            tryFiles = "$uri $uri/ /index.html";
+          };
+          "/scada.api" = {
+            proxyPass = "http://127.0.0.1:85/scada.api";
+          };
+        };
+      };
+    };
+  };
+
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
