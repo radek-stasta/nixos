@@ -186,7 +186,9 @@
     rofi-wayland
     firefox
     hyprpaper
+    gnome.nautilus
     nordzy-cursor-theme
+    nordzy-icon-theme
   ];
 
   fonts.packages = with pkgs; [

@@ -128,7 +128,7 @@ in
 
     oh-my-zsh = {
       enable = true;
-      theme = "jonathan";
+      theme = "fino";
     };
   };
 
@@ -142,6 +142,9 @@ in
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
+    };
+    "org/gnome/desktop/interface" = {
+      icon-theme = "Nordzy";
     };
   };
 }
