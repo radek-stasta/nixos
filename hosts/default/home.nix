@@ -81,6 +81,13 @@ in
       recursive = true;
     };
 
+    # dunst
+    "${config.home.homeDirectory}/.config/dunst" = {
+      source = ../../dotfiles/dunst;
+      recursive = true;
+    };
+
+    # cursor icons
     "${config.home.homeDirectory}/.icons" = {
       source = ../../dotfiles/icons;
     };
@@ -122,6 +129,13 @@ in
     oh-my-zsh = {
       enable = true;
       theme = "jonathan";
+    };
+  };
+
+  programs.kitty = {
+    enable = true;
+    settings = {
+      background_opacity = "0.8";
     };
   };
 }

@@ -183,7 +183,6 @@
     eww
     dunst
     libnotify
-    kitty
     rofi-wayland
     firefox
     hyprpaper
