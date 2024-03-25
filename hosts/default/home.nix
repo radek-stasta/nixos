@@ -125,11 +125,12 @@ in
       flake-update = "nix flake update ~/nixos";
       nixos-update = "sudo nixos-rebuild switch --flake ~/nixos#default";
     };
+  };
 
-    oh-my-zsh = {
-      enable = true;
-      theme = "fino";
-    };
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = builtins.fromTOML (builtins.readFile ../../dotfiles/starship/startship.toml);
   };
 
   programs.kitty = {
