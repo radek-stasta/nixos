@@ -107,4 +107,21 @@ in
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      flake-update = "nix flake update ~/nixos";
+      nixos-update = "sudo nixos-rebuild switch --flake ~/nixos#default";
+    };
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "jonathan";
+    };
+  };
 }
