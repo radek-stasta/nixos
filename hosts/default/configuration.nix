@@ -193,6 +193,7 @@
     nordzy-cursor-theme
     nordzy-icon-theme
     remmina
+    brightnessctl
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
