@@ -80,6 +80,10 @@ in
       source = ../../dotfiles/eww;
       recursive = true;
     };
+
+    "${config.home.homeDirectory}/.icons" = {
+      source = ../../dotfiles/icons;
+    };
   };
 
   # Home Manager can also manage your environment variables through
