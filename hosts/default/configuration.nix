@@ -198,6 +198,7 @@
     nodePackages.npm
     nodePackages.nodejs
     nodePackages."@angular/cli"
+    steam
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
