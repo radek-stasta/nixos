@@ -115,22 +115,20 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.zsh = {
+  programs.fish = {
     enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
 
-    shellAliases = {
-      flake-update = "nix flake update ~/nixos";
-      nixos-update = "sudo nixos-rebuild switch --flake ~/nixos#default";
+    functions = {
+      fish_greeting = {
+        body = "";
+      };
     };
   };
 
   programs.starship = {
     enable = true;
-    enableZshIntegration = true;
-    settings = builtins.fromTOML (builtins.readFile ../../dotfiles/starship/startship.toml);
+    enableFishIntegration = true;
+    settings = builtins.fromTOML (builtins.readFile ../../dotfiles/starship/starship.toml);
   };
 
   programs.kitty = {

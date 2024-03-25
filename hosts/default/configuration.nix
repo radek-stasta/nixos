@@ -155,7 +155,7 @@
     isNormalUser = true;
     description = "rstasta";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     packages = with pkgs; [
       gh
     ];
@@ -205,7 +205,7 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   # List services that you want to enable:
 

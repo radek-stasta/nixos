@@ -1,29 +1,12 @@
-"$schema" = "https://starship.rs/config-schema.json"
-
-# colorscheme
-#
-# #2E3440
-# #3B4252
-# #434C5E
-# #4C566A
-# #D8DEE9
-# #E5E9F0
-# #ECEFF4
-# #8FBCBB
-# #88C0D0
-# #81A1C1
-# #5E81AC
-# #BF616A
-# #D08770
-# #EBCB8B
-# #A3BE8C
-# #B48EAD
-
 format = """
-$username\
+[ ](bg:inverted fg:#bf616a)\
+$username$hostname\
+[](bg:#d08770 fg:#bf616a)\
 $directory\
+[](fg:#d08770 bg:#ebcb8b)\
 $git_branch\
 $git_status\
+[](fg:#ebcb8b bg:#86BBD8)\
 $c\
 $elixir\
 $elm\
@@ -31,95 +14,120 @@ $golang\
 $haskell\
 $java\
 $julia\
-$nodejs\
 $nim\
 $rust\
-[\uE0B0 ](fg:#81A1C1 bg:#2E3440)\
-$line_break\
-$character
+[](fg:#86BBD8 bg:#81a1c1)\
+$kubernetes\
+$docker_context\
+[](fg:#81a1c1 bg:#5e81ac)\
+$character\
+$time\
+[ ](fg:#5e81ac)\
 """
 
-[character]
-success_symbol = "[   \uE007  ](bg:#4C566A)[\uE0BC](fg:#4C566A)"
-error_symbol = "[   \uE007  ](bg:#4C566A fg:#BF616A)[\uE0BC](fg:#4C566A)"
+# Disable the blank line at the start of the prompt
+add_newline = false
 
-# system
-
+# You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "bg:#4C566A"
-style_root = "bg:#4C566A"
-format = "[ $user ]($style)[\uE0BC](bg:#BF616A fg:#4C566A)"
+style_user = "bg:#bf616a bold"
+style_root = "bg:#bf616a bold"
+format = '[$user]($style)'
 
-[directory]
-style = "bg:#BF616A"
-format = "[ $path ]($style)[\uE0BE](bg:#BF616A fg:#D08770)"
-truncate_to_repo = false
-truncation_length = 3
-truncation_symbol = "…/"
-
-# git
-
-[git_branch]
-symbol = "\uE0A0"
-style = "bg:#D08770"
-format = "[[ $symbol $branch ](bg:#D08770)]($style)"
-
-[git_metrics]
+[hostname]
+style = "bg:#bf616a bold"
+format = '[@$hostname ]($style)'
+ssh_only = false
 disabled = false
 
-[git_status]
-format = "[($all_status$ahead_behind)]($style)[\uE0BC](bg:#81A1C1 fg:#D08770)"
-style = "bg:#D08770"
-conflicted = "👿 $count "
-ahead = "⇡ $count "
-behind = "⇣ $count "
-diverged = " $count "
-untracked = "🤷 $count "
-stashed = "‍📦 $count "
-modified = "פֿ $count "
-staged = "[ $count ]"
-renamed = " $count "
-deleted = "🗑 $count "
+[directory]
+style = "bg:#d08770 bold"
+format = "[ $path ]($style)"
+truncation_length = 0
+truncation_symbol = ""
 
-# languages
 
 [c]
-symbol = "© "
-style = "bg:#D8DEE9"
-format = "[[ $symbol ($version) ](bg:#D8DEE9)]($style)"
+symbol = " "
+style = "bg:#88c0d0 fg:#2e3440 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#81a1c1 fg:#2e3440 bold"
+format = '[ $symbol $context ]($style) $path'
+
+[kubernetes]
+symbol = "☸ "
+style = "bg:#81a1c1 fg:#2e3440 bold"
+format = '[ $symbol $context ]($style)'
+disabled = true
 
 [elixir]
-symbol = "\uE62D "
-style = "bg:#D8DEE9"
-format = "[[ $symbol ($version) ](bg:#D8DEE9)]($style)"
+symbol = " "
+style = "bg:#88c0d0"
+format = '[ $symbol ($version) ]($style)'
 
 [elm]
-symbol = "\uE62C "
-style = "bg:#D8DEE9"
-format = "[[ $symbol ($version) ](bg:#D8DEE9)]($style)"
+symbol = " "
+style = "bg:#88c0d0"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#ebcb8b bold fg:#bf616a"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#ebcb8b bold fg:#bf616a"
+format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
-symbol = "\uE627 "
-style = "bg:#81A1C1 fg:#4C566A"
-format = "[ $symbol]($style)"
+symbol = " "
+style = "bg:#88c0d0 fg:#2e3440 bold"
+format = '[ $symbol ($version) ]($style)'
 
 [haskell]
-symbol = "\uE777 "
-style = "bg:#D8DEE9"
-format = "[[ $symbol($version)](bg:#D8DEE9)]($style)"
+symbol = " "
+style = "bg:#88c0d0"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#88c0d0 fg:#2e3440 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#88c0d0 fg:#2e3440 bold"
+format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
-symbol = "\uE718 "
-style = "bg:#81A1C1 fg:#4C566A"
-format = "[ $symbol]($style)"
+symbol = ""
+style = "bg:#88c0d0 fg:#2e3440 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#88c0d0 fg:#2e3440 bold"
+format = '[ $symbol ($version) ]($style)'
 
 [rust]
-symbol = "\uE7A8 "
-style = "bg:#D8DEE9"
-format = "[[ $symbol($version) ](bg:#D8DEE9)]($style)"
+symbol = ""
+style = "bg:#88c0d0 fg:#2e3440 bold"
+format = '[ $symbol ($version) ]($style)'
 
-[ruby]
-symbol = "\uE739 "
-style = "bg:#D8DEE9"
-format = "[[ $symbol($version) ](bg:#D8DEE9)]($style)"
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#5e81ac bold"
+# format = '[ ♥ $time ]($style)'
+format = '[$time ]($style)'
+
+[character]
+disabled = false
+success_symbol = "[ ♥ ](bg:#5e81ac)"
+error_symbol = "[ ✖ ](bg:#5e81ac)"
+# format = '[ ♥ $time ]($style)'
+format = "$symbol"
