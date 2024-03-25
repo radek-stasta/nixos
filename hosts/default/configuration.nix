@@ -157,7 +157,7 @@
   users.users.rstasta = {
     isNormalUser = true;
     description = "rstasta";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.fish;
     packages = with pkgs; [
       gh
@@ -194,6 +194,10 @@
     nordzy-icon-theme
     remmina
     brightnessctl
+    subversion
+    nodePackages.npm
+    nodePackages.nodejs
+    nodePackages."@angular/cli"
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
@@ -215,6 +219,8 @@
   #   enableSSHSupport = true;
   # };
   programs.fish.enable = true;
+
+  virtualisation.docker.enable = true;
 
   # List services that you want to enable:
 

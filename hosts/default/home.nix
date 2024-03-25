@@ -93,8 +93,8 @@ in
     };
 
     # Remmina
-    "${config.home.homeDirectory}/.local/share/remmina/build-server.remmina" = {
-      source = ../../config/build-server.remmina;
+    "${config.home.homeDirectory}/.local/share/remmina" = {
+      source = ../../config/remmina;
     };
   };
 
