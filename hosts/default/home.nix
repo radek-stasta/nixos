@@ -6,6 +6,10 @@ let
   ]);
 in
 {
+  imports = [
+    ../../modules/home-manager/kitty.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "rstasta";
@@ -134,13 +138,6 @@ in
     enable = true;
     enableFishIntegration = true;
     settings = builtins.fromTOML (builtins.readFile ../../dotfiles/starship/starship.toml);
-  };
-
-  programs.kitty = {
-    enable = true;
-    settings = {
-      background_opacity = "0.8";
-    };
   };
 
   programs.gh = {
