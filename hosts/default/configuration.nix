@@ -153,7 +153,7 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -202,6 +202,11 @@
     nodePackages.nodejs
     nodePackages."@angular/cli"
     steam
+    grim
+    slurp
+    wl-clipboard
+    xwaylandvideobridge
+    jq
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
