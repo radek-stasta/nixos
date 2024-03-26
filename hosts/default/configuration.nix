@@ -205,6 +205,8 @@
     wl-clipboard
     xwaylandvideobridge
     jq
+    pavucontrol
+    ntfs3g
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
