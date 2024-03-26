@@ -154,5 +154,8 @@ in
     "org/gnome/desktop/interface" = {
       icon-theme = "Nordzy";
     };
+    "org/gnome/desktop/interface" = {
+      cursor-theme = "Nordzy-cursors";
+    };
   };
 }
