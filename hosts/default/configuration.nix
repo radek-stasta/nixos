@@ -211,6 +211,7 @@
     pavucontrol
     ntfs3g
     protonup-qt
+    krdc
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
