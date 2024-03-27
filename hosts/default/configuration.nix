@@ -200,6 +200,7 @@
     subversion
     nodePackages.npm
     nodePackages.nodejs
+    nodePackages.grunt-cli
     nodePackages."@angular/cli"
     steam
     grim
@@ -252,6 +253,19 @@
           };
           "/scada.api" = {
             proxyPass = "http://127.0.0.1:85/scada.api";
+          };
+        };
+      };
+      "webpanel" = {
+        listen = [ { addr = "localhost"; port = 83; } ];
+        root = "/var/www/webpanel";
+        locations = {
+          "/" = {
+            index = "index.html";
+            tryFiles = "$uri $uri/ /index.html";
+          };
+          "/api" = {
+            proxyPass = "http://127.0.0.1:85/api";
           };
         };
       };
