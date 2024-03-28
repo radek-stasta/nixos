@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
+      ../../modules/nixos/nginx.nix
     ];
 
   # Enable experimental features
@@ -237,42 +238,6 @@
   virtualisation.docker.enable = true;
 
   # List services that you want to enable:
-  services.nginx = {
-    enable = true;
-    user = "rstasta";
-    recommendedGzipSettings = true;
-    recommendedOptimisation = true;
-    recommendedProxySettings = true;
-    virtualHosts = {
-      "scada-web" = {
-        listen = [ { addr = "localhost"; port = 81; } ];
-        root = "/var/www/scada-web";
-        locations = {
-          "/" = {
-            index = "index.html";
-            tryFiles = "$uri $uri/ /index.html";
-          };
-          "/scada.api" = {
-            proxyPass = "http://127.0.0.1:85/scada.api";
-          };
-        };
-      };
-      "webpanel" = {
-        listen = [ { addr = "localhost"; port = 83; } ];
-        root = "/var/www/webpanel";
-        locations = {
-          "/" = {
-            index = "index.html";
-            tryFiles = "$uri $uri/ /index.html";
-          };
-          "/api" = {
-            proxyPass = "http://127.0.0.1:85/api";
-          };
-        };
-      };
-    };
-  };
-
   services.gnome.gnome-keyring.enable = true;
 
   # Enable the OpenSSH daemon.
