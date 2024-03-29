@@ -213,6 +213,9 @@
     ntfs3g
     protonup-qt
     krdc
+    vulkan-tools
+    glxinfo
+    kodi
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
