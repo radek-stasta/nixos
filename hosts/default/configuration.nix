@@ -15,6 +15,9 @@
   # Enable experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Zen kernel
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -216,6 +219,7 @@
     vulkan-tools
     glxinfo
     kodi
+    libreoffice-fresh
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
