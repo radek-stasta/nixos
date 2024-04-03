@@ -132,6 +132,13 @@ in
         body = "";
       };
     };
+
+    shellAliases = {
+      "nixos-flake" = "nix flake update ~/nixos/";
+      "nixos-rebuild" = "sudo nixos-rebuild switch --flake ~/nixos/#default";
+      "nixos-collect-garbage" = "sudo nix-collect-garbage --delete-older-than 7d";
+      "wireguard-start" = "wg-quick up wgEC";
+    };
   };
 
   programs.starship = {
