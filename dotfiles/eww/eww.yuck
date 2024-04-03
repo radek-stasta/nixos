@@ -134,6 +134,7 @@
         :data datetime
         :bg-color "#EBCB8B"
       )
+      (actionsRevealer)
     )
   )
 )
@@ -160,6 +161,64 @@
 (defwidget topbarInfoText [data]
   (label
     :markup data
+  )
+)
+
+(defvar actions false)
+
+;; ACTIONS REVEALER
+(defwidget actionsRevealer []
+  (eventbox
+    :onhover "eww update actions=true"
+    :onhoverlost "eww update actions=false"
+    (box
+      :space-evenly false
+      (button
+        :class "action-revealer-button"
+        ""
+      )
+      (revealer
+        :reveal actions
+        :transition "slideright"
+        (box
+          (button
+            :class "action-button"
+            :onclick "python ~/.config/eww/actions/update_flake.py"
+            ""
+          )
+          (button
+            :class "action-button"
+            :onclick "python ~/.config/eww/actions/rebuild_switch.py"
+            ""
+          )
+          (button
+            :class "action-button"
+            :onclick "python ~/.config/eww/actions/collect_garbage.py"
+            ""
+          )
+          (button
+            :class "action-button"
+            :onclick "python ~/.config/eww/actions/start_wireguard.py"
+            ""
+          )
+          (button
+            :class "action-button"
+            :onclick "python ~/.config/eww/actions/restart_eww.py"
+            ""
+          )
+          (button
+            :class "action-button"
+            :onclick "reboot"
+            ""
+          )
+          (button
+            :class "action-button"
+            :onclick "shutdown now"
+            ""
+          )
+        )
+      )
+    )
   )
 )
 
