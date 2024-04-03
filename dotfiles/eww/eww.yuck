@@ -165,17 +165,22 @@
 )
 
 (defvar actions false)
+(defvar not_actions true)
 
 ;; ACTIONS REVEALER
 (defwidget actionsRevealer []
   (eventbox
-    :onhover "eww update actions=true"
-    :onhoverlost "eww update actions=false"
+    :onhover "eww update actions=true; eww update not_actions=false"
+    :onhoverlost "eww update actions=false; eww update not_actions=true"
     (box
+      :class "actions-revealer"
       :space-evenly false
-      (button
-        :class "action-revealer-button"
-        ""
+      (revealer
+        :reveal not_actions
+        (button
+          :class "actions-revealer-button"
+          '${not_actions ? "" : ""}'
+        )
       )
       (revealer
         :reveal actions
