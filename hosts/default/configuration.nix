@@ -220,6 +220,9 @@
     glxinfo
     kodi
     libreoffice-fresh
+    ios-webkit-debug-proxy
+    libimobiledevice
+    ifuse
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
@@ -246,9 +249,10 @@
 
   # List services that you want to enable:
   services.gnome.gnome-keyring.enable = true;
+  services.usbmuxd.enable = true;
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
