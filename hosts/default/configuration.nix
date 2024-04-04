@@ -191,7 +191,7 @@
     neovim
     lshw
     eww
-    dunst
+    swaynotificationcenter
     libnotify
     rofi-wayland
     firefox

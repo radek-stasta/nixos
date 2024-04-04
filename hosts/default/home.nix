@@ -85,9 +85,9 @@ in
       recursive = true;
     };
 
-    # dunst
-    "${config.home.homeDirectory}/.config/dunst" = {
-      source = ../../dotfiles/dunst;
+    # swaync
+    "${config.home.homeDirectory}/.config/swaync" = {
+      source = ../../dotfiles/swaync;
       recursive = true;
     };
 

@@ -198,6 +198,11 @@
           )
           (button
             :class "action-button"
+            :onclick "python ~/.config/eww/actions/rebuild_test.py"
+            ""
+          )
+          (button
+            :class "action-button"
             :onclick "python ~/.config/eww/actions/collect_garbage.py"
             ""
           )
