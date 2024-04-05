@@ -223,6 +223,7 @@
     ios-webkit-debug-proxy
     libimobiledevice
     ifuse
+    dotnet-sdk_8
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
