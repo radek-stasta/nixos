@@ -224,6 +224,7 @@
     libimobiledevice
     ifuse
     dotnet-sdk_8
+    godot_4
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
