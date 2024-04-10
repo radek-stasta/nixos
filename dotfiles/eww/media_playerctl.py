@@ -1,17 +1,26 @@
 from subprocess import run
 
-# Get status
-cmd = "playerctl status"
+# List all player names
+cmd = "playerctl -l"
 data = run(cmd, capture_output=True, shell=True)
-status = data.stdout.decode('utf-8').strip()
+player_list = data.stdout.decode('utf-8').strip().split('\n')
+actual_player = None
+
+for player in player_list:
+    # Get status
+    cmd = "playerctl status -p " + player
+    data = run(cmd, capture_output=True, shell=True)
+    status = data.stdout.decode('utf-8').strip()
+    if 'Playing' == status:
+        actual_player = player
 
 output = ''
 
-if 'Playing' == status:
+if actual_player:
     # Get metadata
     output += ''
     
-    cmd = "playerctl metadata --format '{{ artist }};{{ title }};{{ duration(position) }};{{ duration(mpris:length) }}'"
+    cmd = "playerctl metadata -p " + actual_player + " --format '{{ artist }};{{ title }};{{ duration(position) }};{{ duration(mpris:length) }}'"
     data = run(cmd, capture_output=True, shell=True)
     metadata = data.stdout.decode('utf-8').strip()
     metadataSplit = metadata.split(';')
