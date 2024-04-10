@@ -225,6 +225,9 @@
     ifuse
     dotnet-sdk_8
     godot_4
+    gimp
+    spotify
+    playerctl
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
@@ -257,8 +260,8 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 4200 ];
+  networking.firewall.allowedUDPPorts = [ 4200 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
