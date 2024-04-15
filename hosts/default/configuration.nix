@@ -145,6 +145,9 @@
     };
   };
 
+  # Enable steam input devices
+  hardware.steam-hardware.enable = true;
+
   # Hyprland
   programs.hyprland = {
     enable = true;
