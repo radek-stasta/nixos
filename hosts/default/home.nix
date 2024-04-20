@@ -139,6 +139,7 @@ in
       "nixos-collect-garbage" = "sudo nix-collect-garbage --delete-older-than 7d";
       "wireguard-start" = "wg-quick up wgEC";
       "eww-restart-bars" = "eww close-all && eww open topbar0 && eww open topbar1 && eww open topbar2 && eww open steam";
+      "file-sizes" = "du -ah -d 1 2>/dev/null | sort -h";
     };
   };
 

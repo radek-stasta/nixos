@@ -183,6 +183,8 @@
     gimp
     spotify
     playerctl
+    blender
+    krita
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
