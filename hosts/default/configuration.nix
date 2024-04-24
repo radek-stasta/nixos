@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 {
   imports =
@@ -59,6 +59,7 @@
 
   # Enable GDM display manager
   services.xserver.displayManager.gdm.enable = true;
+  services.displayManager.defaultSession = "hyprland";
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -106,6 +107,9 @@
     xwayland.enable = true;
   };
 
+  # Gnome
+  services.xserver.desktopManager.gnome.enable = true;
+
   environment.sessionVariables = {
     # WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
@@ -113,7 +117,11 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
+    extraPortals = lib.mkForce [
+      pkgs.xdg-desktop-portal-gtk # For both
+      pkgs.xdg-desktop-portal-hyprland # For Hyprland
+      pkgs.xdg-desktop-portal-gnome # For GNOME
+    ];
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
