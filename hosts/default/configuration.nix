@@ -148,8 +148,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    (google-chrome.override {
+      commandLineArgs = [
+        "--enable-features=UseOzonePlatform"
+        "--ozone-platform=wayland"
+      ];
+    })
     git
-    google-chrome
     jetbrains.webstorm
     neovim
     lshw
