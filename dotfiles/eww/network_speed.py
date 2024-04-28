@@ -6,7 +6,7 @@ bytes1 = 0
 bytes2 = 0
 
 # Get name of network interface
-cmd = "ip -o -4 route show to default | awk '{print $5}'"
+cmd = "ip -o -4 route show to default | sort -nk 9 | awk 'NR==1 {print $5}'"
 data = run(cmd, capture_output=True, shell=True)
 interfaceName = data.stdout.decode('utf-8').strip()
 
