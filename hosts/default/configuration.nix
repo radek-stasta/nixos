@@ -198,7 +198,6 @@
     playerctl
     blender
     krita
-    trickle
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
