@@ -268,12 +268,14 @@
             :class "steam-trending"
               (label 
                 :markup steamTrending
+                :show-truncated false
               )
           )
           (box
             :class "steam-new"
               (label
                 :markup steamNew
+                :show-truncated false
               )
           )
       )
@@ -285,6 +287,7 @@
             :class "steam-upcoming"
               (label
                 :markup steamUpcoming
+                :show-truncated false
               )
           )
           (box
