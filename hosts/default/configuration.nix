@@ -193,6 +193,7 @@
     playerctl
     blender
     krita
+    mc
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
