@@ -163,5 +163,9 @@ in
     "org/gnome/desktop/interface" = {
       cursor-theme = "Nordzy-cursors";
     };
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
   };
 }

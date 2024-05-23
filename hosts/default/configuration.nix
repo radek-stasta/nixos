@@ -138,6 +138,7 @@
   environment.sessionVariables = {
     # WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
+    QT_QPA_PLATFORM = "wayland;xcb";
   };
 
   xdg.portal = {
@@ -153,7 +154,7 @@
   users.users.rstasta = {
     isNormalUser = true;
     description = "rstasta";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
     shell = pkgs.fish;
     packages = with pkgs; [
     ];
@@ -219,6 +220,7 @@
     blender
     krita
     mc
+    pureref
   ];
 
   environment.etc."wireguard/wgEC.conf" = {
@@ -241,7 +243,10 @@
   # };
   programs.fish.enable = true;
 
+  # Virtualisation
   virtualisation.docker.enable = true;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   # List services that you want to enable:
   services.gnome.gnome-keyring.enable = true;
