@@ -13,6 +13,31 @@
       ../../modules/nixos/nvidia.nix
     ];
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      hyprland = prev.hyprland.overrideAttrs {
+        patches = [
+          (pkgs.fetchpatch {
+            name = "hyprland-fix-cursor.patch";
+            url = "https://github.com/hyprwm/Hyprland/commit/4cdddcfe466cb21db81af0ac39e51cc15f574da9.patch";
+            sha256 = "sha256-eKODLcmqLgxkARVophY/lZkMZpIWDLEkt1nCzd41vyg=";
+          })
+        ];
+      };
+    })
+    (final: prev: {
+      hyprpaper = prev.hyprpaper.overrideAttrs rec {
+        version = "0.7.0";
+        src = prev.fetchFromGitHub {
+          owner = "hyprwm";
+          repo = "hyprpaper";
+          rev = "v${version}";
+          hash = "sha256-l13c8ALA7ZKDgluYA1C1OfkDGYD6e1/GR6LJnxCLRhA=";
+        };
+      };
+    })
+  ];
+
   # Enable experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
