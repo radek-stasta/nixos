@@ -5,13 +5,12 @@
 { config, pkgs, inputs, lib, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-      ../../modules/nixos/nginx.nix
-      ../../modules/nixos/nvidia.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+    ../../modules/nixos/nginx.nix
+    ../../modules/nixos/nvidia.nix
+  ];
 
   nixpkgs.overlays = [
     (final: prev: {
@@ -23,17 +22,6 @@
             sha256 = "sha256-eKODLcmqLgxkARVophY/lZkMZpIWDLEkt1nCzd41vyg=";
           })
         ];
-      };
-    })
-    (final: prev: {
-      hyprpaper = prev.hyprpaper.overrideAttrs rec {
-        version = "0.7.0";
-        src = prev.fetchFromGitHub {
-          owner = "hyprwm";
-          repo = "hyprpaper";
-          rev = "v${version}";
-          hash = "sha256-l13c8ALA7ZKDgluYA1C1OfkDGYD6e1/GR6LJnxCLRhA=";
-        };
       };
     })
   ];
