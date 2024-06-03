@@ -13,6 +13,17 @@
   ];
 
   nixpkgs.overlays = [
+    (final: prev: {
+      hyprland = prev.hyprland.overrideAttrs {
+        patches = [
+          (pkgs.fetchpatch {
+            name = "hyprland-fix-cursor.patch";
+            url = "https://github.com/hyprwm/Hyprland/commit/fa69de8ab6cc17bb763a1586c55847c5d5a82a83.patch";
+            sha256 = "sha256-ZXckiZ+X797p5NA7v83psuHHOd9AvG/CfttAqiJDaFs=";
+          })
+        ];
+      };
+    })
   ];
 
   # Enable experimental features
