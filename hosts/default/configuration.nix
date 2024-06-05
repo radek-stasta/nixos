@@ -24,6 +24,13 @@
         ];
       };
     })
+    (self: super: {
+      wpa_supplicant = super.wpa_supplicant.overrideAttrs (oldAttrs: rec {
+        extraConfig = oldAttrs.extraConfig + ''
+          CONFIG_WEP=y
+        '';
+      });
+    })
   ];
 
   # Enable experimental features
@@ -244,8 +251,8 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 4200 ];
-  networking.firewall.allowedUDPPorts = [ 4200 ];
+  networking.firewall.allowedTCPPorts = [ 4200 83 ];
+  networking.firewall.allowedUDPPorts = [ 4200 83 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
