@@ -9,6 +9,8 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    ../modules/nixos/localization.nix
+    ../modules/nixos/sound.nix
   ];
 
   nixpkgs = {
