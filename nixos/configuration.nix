@@ -9,8 +9,9 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
-    ../modules/nixos/localization.nix
-    ../modules/nixos/sound.nix
+    ../modules/nixos/shared.nix
+    ../modules/nixos/grub_efi.nix
+    ../modules/nixos/kde.nix
   ];
 
   nixpkgs = {
@@ -45,29 +46,6 @@
     # Opinionated: make flake registry and nix path match flake inputs
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-  };
-
-  # Bootloader
-  boot.loader.grub = {
-    enable = true;
-    devices = [ "nodev" ];
-    efiSupport = true;
-    efiInstallAsRemovable = true;
-  };
-
-  # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-
-  # Hostname
-  networking.hostName = "nixos";
-
-  # Users
-  users.users = {
-    rstasta = {
-      initialPassword = "password";
-      isNormalUser = true;
-      extraGroups = ["wheel" "networkmanager" "audio"];
-    };
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
