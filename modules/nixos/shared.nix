@@ -2,9 +2,9 @@
 
 {
   imports = [
-    localization.nix
-    nvidia.nix
-    sound.nix
+    ./localization.nix
+    ./nvidia.nix
+    ./sound.nix
   ];
 
   config = {
