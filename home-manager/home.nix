@@ -26,13 +26,17 @@
 
   # Packages
   home.packages = with pkgs; [
+    jetbrains.webstorm
   ];
 
   # Programs
-  programs.home-manager.enable = true;
-  programs.git.enable = true;
-  programs.gh.enable = true;
-  programs.neovim.enable = true;
+  programs = {
+    firefox.enable = true;
+    git.enable = true;
+    gh.enable = true;
+    home-manager.enable = true;
+    neovim.enable = true;
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

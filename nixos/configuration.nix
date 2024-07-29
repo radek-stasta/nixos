@@ -7,8 +7,8 @@
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    ./hardware-configuration.nix
     ../modules/nixos/shared.nix
     ../modules/nixos/grub_efi.nix
     ../modules/nixos/kde.nix
