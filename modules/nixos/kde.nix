@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./nvidia_sync.nix
   ];
 
   config = {
