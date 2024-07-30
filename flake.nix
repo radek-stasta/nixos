@@ -23,11 +23,11 @@
     nixosConfigurations = {
       nixos-efi-kde = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./nixos/configuration-efi-kde.nix];
+        modules = [./nixos/efi/configuration-kde.nix];
       };
       nixos-bios-xfce = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./nixos/configuration-bios-xfce.nix];
+        modules = [./nixos/bios/configuration-xfce.nix];
       };
     };
   };

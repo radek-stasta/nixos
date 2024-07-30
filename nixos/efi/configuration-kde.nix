@@ -9,11 +9,11 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration-efi.nix
-    ../modules/nixos/shared.nix
-    ../modules/nixos/grub_efi.nix
-    ../modules/nvidia.nix
-    ../modules/nvidia_sync.nix
-    ../modules/nixos/kde.nix
+    ../../modules/nixos/shared.nix
+    ../../modules/nixos/grub_efi.nix
+    ../../modules/nvidia.nix
+    ../../modules/nvidia_sync.nix
+    ../../modules/nixos/kde.nix
   ];
 
   nixpkgs = {
@@ -27,7 +27,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      rstasta = import ../home-manager/home.nix;
+      rstasta = import ../../home-manager/home.nix;
     };
   };
 

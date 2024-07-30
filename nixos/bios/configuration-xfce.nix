@@ -8,10 +8,10 @@
 }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./hardware-configuration-bios.nix
-    ../modules/nixos/shared.nix
-    ../modules/nixos/grub_bios.nix
-    ../modules/nixos/xfce.nix
+    ./hardware-configuration.nix
+    ../../modules/nixos/shared.nix
+    ../../modules/nixos/grub_bios.nix
+    ../../modules/nixos/xfce.nix
   ];
 
   nixpkgs = {
@@ -25,7 +25,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      rstasta = import ../home-manager/home.nix;
+      rstasta = import ../../home-manager/home-xfce.nix;
     };
   };
 
