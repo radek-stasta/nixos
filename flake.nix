@@ -21,13 +21,13 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      nixos-efi-kde = nixpkgs.lib.nixosSystem {
+      nixos-physical-kde = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./nixos/efi/configuration-kde.nix];
+        modules = [./nixos/physical/configuration-kde.nix];
       };
-      nixos-bios-xfce = nixpkgs.lib.nixosSystem {
+      nixos-virtual-xfce = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./nixos/bios/configuration-xfce.nix];
+        modules = [./nixos/virtual/configuration-xfce.nix];
       };
     };
   };
