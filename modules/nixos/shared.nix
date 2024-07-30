@@ -3,7 +3,6 @@
 {
   imports = [
     ./localization.nix
-    ./nvidia.nix
     ./sound.nix
   ];
 

@@ -8,12 +8,10 @@
 }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./hardware-configuration-efi.nix
+    ./hardware-configuration-bios.nix
     ../modules/nixos/shared.nix
-    ../modules/nixos/grub_efi.nix
-    ../modules/nvidia.nix
-    ../modules/nvidia_sync.nix
-    ../modules/nixos/kde.nix
+    ../modules/nixos/grub_bios.nix
+    ../modules/nixos/xfce.nix
   ];
 
   nixpkgs = {

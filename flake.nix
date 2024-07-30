@@ -25,6 +25,10 @@
         specialArgs = {inherit inputs outputs;};
         modules = [./nixos/configuration-efi-kde.nix];
       };
+      nixos-bios-xfce = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./nixos/configuration-bios-xfce.nix];
+      };
     };
   };
 }
