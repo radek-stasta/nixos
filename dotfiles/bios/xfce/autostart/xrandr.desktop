@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Xrandr
+Comment=Xrandr settings
+Exec=sh -c "xrandr --output Virtual-1 --mode 1280x800"
+Terminal=false
+Type=Application

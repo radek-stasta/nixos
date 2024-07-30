@@ -22,6 +22,12 @@
   home = {
     username = "rstasta";
     homeDirectory = "/home/rstasta";
+
+    file = {
+      "${config.home.homeDirectory}/.config/autostart/xrandr.desktop" = {
+        source = ../dotfiles/bios/xfce/autostart/xrandr.desktop;
+      };
+    };
   };
 
   # Packages
