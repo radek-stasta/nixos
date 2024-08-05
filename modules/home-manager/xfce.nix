@@ -2,6 +2,23 @@
 
 {
   config = {
+    # Packages
+    home.packages = with pkgs; [
+      tdrop
+    ];
+
+    # Programs
+    programs = {
+      alacritty = {
+        settings = {
+          window = {
+            decorations = "None";
+            opacity = 0.8;
+          };
+        };
+      };
+    };
+
     home = {
       file = {
         # Theme
@@ -20,6 +37,9 @@
         };
         xfwm4 = {
           "general/theme" = "orchis-dark-nord";
+        };
+        xfce4-keyboard-shortcuts = {
+          "commands/custom/F9" = "tdrop -ma alacritty";
         };
       };
     };
