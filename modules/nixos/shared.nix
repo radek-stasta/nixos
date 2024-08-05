@@ -18,8 +18,17 @@
       rstasta = {
         initialPassword = "password";
         isNormalUser = true;
+        shell = pkgs.fish;
         extraGroups = ["wheel" "networkmanager" "audio"];
       };
     };
+
+    # Programs
+    programs.fish.enable = true;
+
+    # Fonts
+    fonts.packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "SourceCodePro" ]; })
+    ];
   };
 }
