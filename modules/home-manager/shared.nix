@@ -16,7 +16,6 @@
     # Packages
     home.packages = with pkgs; [
       jetbrains.webstorm
-      sassc                 # for building Orchis Theme
     ];
 
     # Programs

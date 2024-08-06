@@ -4,6 +4,9 @@
   config = {
     # Packages
     home.packages = with pkgs; [
+      nordzy-cursor-theme
+      nordzy-icon-theme
+      sassc # for building Orchis Theme
       tdrop
     ];
 
