@@ -11,8 +11,8 @@
     ./hardware-configuration.nix
     ../../modules/nixos/shared.nix
     ../../modules/nixos/grub_efi.nix
-    ../../modules/nvidia.nix
-    ../../modules/nvidia_sync.nix
+    ../../modules/nixos/nvidia.nix
+    ../../modules/nixos/nvidia_sync.nix
     ../../modules/nixos/xfce.nix
   ];
 
@@ -27,7 +27,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      rstasta = import ../../home-manager/physical/xfce.nix;
+      rstasta = import ../../home-manager/xfce.nix;
     };
   };
 

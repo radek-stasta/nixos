@@ -12,17 +12,83 @@
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/nix/store/v0fzrgm0kswaw8abz98is572bhh6hmgm-xfdesktop-4.18.1/share/backgrounds/xfce/xfce-shapes.svg"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/nix/store/v0fzrgm0kswaw8abz98is572bhh6hmgm-xfdesktop-4.18.1/share/backgrounds/xfce/xfce-shapes.svg"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/nix/store/v0fzrgm0kswaw8abz98is572bhh6hmgm-xfdesktop-4.18.1/share/backgrounds/xfce/xfce-shapes.svg"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+      </property>
+      <property name="monitorDP-1" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+        <property name="workspace3" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+      </property>
+      <property name="monitorHDMI-0" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+        <property name="workspace3" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+      </property>
+      <property name="monitoreDP-1-1" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
+        </property>
+        <property name="workspace3" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/rstasta/.local/share/wallpapers/nord/nord.jpeg"/>
         </property>
       </property>
     </property>

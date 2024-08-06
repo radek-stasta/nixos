@@ -6,9 +6,8 @@
   ...
 }: {
   imports = [
-    ../../modules/home-manager/shared.nix
-    ../../modules/home-manager/xfce.nix
-    ../../modules/home-manager/virtual/xfce.nix
+    ../modules/home-manager/shared.nix
+    ../modules/home-manager/xfce.nix
   ];
 
   nixpkgs = {
