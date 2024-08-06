@@ -13,7 +13,7 @@
         settings = {
           window = {
             decorations = "None";
-            opacity = 0.8;
+            opacity = 0.9;
           };
         };
       };
@@ -40,6 +40,9 @@
         };
         xfce4-keyboard-shortcuts = {
           "commands/custom/F9" = "tdrop -ma alacritty";
+        };
+        xfce4-desktop = {
+          "backdrop/screen0/monitorVirtual-1/workspace0/last-image" = "${config.home.homeDirectory}/.local/share/wallpapers/nord/nord.jpeg";
         };
       };
     };

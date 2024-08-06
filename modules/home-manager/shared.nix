@@ -6,6 +6,11 @@
     home = {
       username = "rstasta";
       homeDirectory = "/home/rstasta";
+      file = {
+        "${config.home.homeDirectory}/.local/share/wallpapers" = {
+          source = ../../wallpapers;
+        };
+      };
     };
 
     # Packages
