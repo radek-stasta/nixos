@@ -24,6 +24,7 @@
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
+    backupFileExtension = "backup";
     users = {
       rstasta = import ../../home-manager/virtual/home-xfce.nix;
     };
