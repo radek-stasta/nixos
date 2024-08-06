@@ -21,9 +21,9 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      nixos-physical-kde = nixpkgs.lib.nixosSystem {
+      nixos-physical-xfce = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./nixos/physical/configuration-kde.nix];
+        modules = [./nixos/physical/configuration-xfce.nix];
       };
       nixos-virtual-xfce = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};

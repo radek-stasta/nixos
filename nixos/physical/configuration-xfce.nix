@@ -13,7 +13,7 @@
     ../../modules/nixos/grub_efi.nix
     ../../modules/nvidia.nix
     ../../modules/nvidia_sync.nix
-    ../../modules/nixos/kde.nix
+    ../../modules/nixos/xfce.nix
   ];
 
   nixpkgs = {
@@ -27,7 +27,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      rstasta = import ../../home-manager/physical/home-kde.nix;
+      rstasta = import ../../home-manager/physical/xfce.nix;
     };
   };
 
