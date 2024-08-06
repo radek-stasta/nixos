@@ -26,9 +26,10 @@
           source = ../../dotfiles/shared/themes/orchis-dark-nord;
         };
 
-        # Settings
+        # Settings (needs to be out of store link so changes are reflected in dotfiles)
         "${config.home.homeDirectory}/.config/xfce4/xfconf/xfce-perchannel-xml" = {
-          source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/shared/xfce;
+          source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/shared/xfce";
+          recursive = true;
         };
       };
     };
