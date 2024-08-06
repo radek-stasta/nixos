@@ -28,7 +28,7 @@
 
     # Fonts
     fonts.packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "SourceCodePro" ]; })
+      (nerdfonts.override { fonts = [ "SourceCodePro" "Overpass" ]; })
     ];
 
     # Services

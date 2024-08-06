@@ -20,6 +20,9 @@
           };
         };
       };
+      rofi = {
+        enable = true;
+      };
     };
 
     home = {
@@ -33,6 +36,11 @@
         "${config.home.homeDirectory}/.config/xfce4/xfconf/xfce-perchannel-xml" = {
           source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/shared/xfce";
           recursive = true;
+        };
+
+        # Rofi
+        "${config.home.homeDirectory}/.config/rofi" = {
+          source = ../../dotfiles/shared/rofi;
         };
       };
     };
