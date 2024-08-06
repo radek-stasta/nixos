@@ -27,7 +27,7 @@
         };
 
         # Settings
-        "${config.home.homeDirectory}/.themes/orchis-dark-nord" = {
+        "${config.home.homeDirectory}/.config/xfce4/xfconf/xfce-perchannel-xml" = {
           source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/shared/xfce;
         };
       };
