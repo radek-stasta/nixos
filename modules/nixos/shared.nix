@@ -30,5 +30,8 @@
     fonts.packages = with pkgs; [
       (nerdfonts.override { fonts = [ "SourceCodePro" ]; })
     ];
+
+    # Services
+    services.gnome.gnome-keyring.enable = true;
   };
 }
