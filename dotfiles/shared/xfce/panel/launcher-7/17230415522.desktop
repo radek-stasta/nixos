@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Logout
+Comment=Logout menu
+Exec=xfce4-session-logout
+Icon=/home/rstasta/.local/share/icons/logout.png
+Path=
+Terminal=false
+StartupNotify=false

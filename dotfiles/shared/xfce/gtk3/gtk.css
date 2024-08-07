@@ -41,3 +41,10 @@
     margin: 4px;
     background-color: #a3be8c;
 }
+
+/* Logout button */
+#launcher-7 #launcher-arrow {
+    border-radius: 32px;
+    margin: 4px;
+    background-color: #bf616a;
+}
