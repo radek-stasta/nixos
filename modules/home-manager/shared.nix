@@ -8,7 +8,12 @@
       homeDirectory = "/home/rstasta";
       file = {
         "${config.home.homeDirectory}/.local/share/wallpapers" = {
-          source = ../../wallpapers;
+          source = ../../assets/wallpapers;
+        };
+      };
+      file = {
+        "${config.home.homeDirectory}/.local/share/icons" = {
+          source = ../../assets/icons;
         };
       };
     };
