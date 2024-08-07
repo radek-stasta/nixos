@@ -1,0 +1,40 @@
+;; Graph view widget
+(defwidget graph-view [text value graph-value]
+  (box
+    :orientation "v"
+    :space-evenly false
+    (label
+      :text text
+    )
+    (label
+      :text value
+    )
+    (graph
+      :width 200
+      :height 100
+      :value graph-value
+      :time-range "30s"
+    )
+  )
+)
+
+;; Main widget
+(defwidget system-monitor []
+  (graph-view
+    :text "Memory"
+    :value "${round(EWW_RAM.used_mem / 1000000000, 1)}GiB"
+    :graph-value {EWW_RAM.used_mem_perc}
+  )
+)
+
+;; Window
+(defwindow system-monitor
+  :monitor 0
+  :geometry (geometry
+    :x "30px"
+    :y "52px"
+    :anchor "top left"
+  )
+  :stacking "fg"
+  (system-monitor)
+)

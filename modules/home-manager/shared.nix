@@ -21,6 +21,7 @@
     # Packages
     home.packages = with pkgs; [
       jetbrains.webstorm
+      killall
     ];
 
     # Programs

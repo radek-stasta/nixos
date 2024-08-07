@@ -26,9 +26,11 @@
           };
         };
       };
-      rofi = {
+      eww = {
         enable = true;
+        configDir = ../../dotfiles/shared/eww;
       };
+      rofi.enable = true;
     };
 
     home = {
