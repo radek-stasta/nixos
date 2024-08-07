@@ -18,6 +18,12 @@
             decorations = "None";
             opacity = 0.9;
           };
+          font = {
+            normal = {
+              family = "UbuntuMono Nerd Font Mono";
+            };
+            size = 14;
+          };
         };
       };
       rofi = {
