@@ -5,7 +5,7 @@
     # Packages
     home.packages = with pkgs; [
       nordzy-cursor-theme
-      nordzy-icon-theme
+      papirus-nord
       sassc # for building Orchis Theme
       tdrop
     ];
