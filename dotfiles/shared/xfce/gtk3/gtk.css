@@ -1,6 +1,15 @@
+/* Invisible top panel */
+.horizontal {
+    background-color: transparent;
+}
+
+.xfce4-panel {
+    border-radius: 32px;
+}
+
 /* Workspace switcher (pager) */
 #pager-1 #xfce-panel-toggle-button {
-    margin: 10px 2px;
+    margin: 12px 2px;
     padding: 0;
     font-size: 0;
     background-color: transparent;

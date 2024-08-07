@@ -4,17 +4,27 @@
   <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="1"/>
+    <value type="int" value="2"/>
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=6;x=0;y=0"/>
-      <property name="length" type="double" value="100"/>
+      <property name="position" type="string" value="p=0;x=1024;y=32"/>
+      <property name="length" type="double" value="99"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="16"/>
-      <property name="size" type="uint" value="36"/>
+      <property name="size" type="uint" value="40"/>
       <property name="plugin-ids" type="array">
+        <value type="int" value="2"/>
         <value type="int" value="1"/>
       </property>
       <property name="output-name" type="string" value="Primary"/>
+      <property name="enable-struts" type="bool" value="false"/>
+    </property>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=6;x=103;y=25"/>
+      <property name="size" type="uint" value="64"/>
+      <property name="length" type="double" value="100"/>
+      <property name="mode" type="uint" value="0"/>
+      <property name="position-locked" type="bool" value="true"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -22,6 +32,9 @@
       <property name="rows" type="uint" value="1"/>
       <property name="miniature-view" type="bool" value="false"/>
       <property name="workspace-scrolling" type="bool" value="false"/>
+    </property>
+    <property name="plugin-2" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
     </property>
   </property>
 </channel>
