@@ -49,6 +49,12 @@
           source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/shared/xfce/gtk3/gtk.css";
         };
 
+        # Panel launchers (needs to be out of store link so changes are reflected in dotfiles)
+        "${config.home.homeDirectory}/.config/xfce4/panel" = {
+          source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/shared/xfce/panel";
+          recursive = true;
+        };
+
         # Rofi
         "${config.home.homeDirectory}/.config/rofi" = {
           source = ../../dotfiles/shared/rofi;

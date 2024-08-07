@@ -17,7 +17,7 @@
         <value type="int" value="1"/>
         <value type="int" value="4"/>
         <value type="int" value="3"/>
-        <value type="int" value="5"/>
+        <value type="int" value="6"/>
       </property>
       <property name="output-name" type="string" value="Primary"/>
       <property name="enable-struts" type="bool" value="false"/>
@@ -43,17 +43,20 @@
       <property name="timezone" type="string" value="Europe/Prague"/>
       <property name="mode" type="uint" value="2"/>
       <property name="digital-layout" type="uint" value="1"/>
-      <property name="digital-date-font" type="string" value="Ubuntu Nerd Font 10"/>
-      <property name="digital-time-font" type="string" value="Ubuntu Nerd Font 10"/>
-      <property name="digital-date-format" type="string" value="%d.%m."/>
+      <property name="digital-date-font" type="string" value="Ubuntu Nerd Font 9"/>
+      <property name="digital-time-font" type="string" value="Ubuntu Nerd Font Bold 10"/>
+      <property name="digital-date-format" type="string" value=" %d.%m."/>
       <property name="digital-time-format" type="string" value="%R"/>
     </property>
     <property name="plugin-4" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-5" type="string" value="separator">
-      <property name="style" type="uint" value="0"/>
+    <property name="plugin-6" type="string" value="launcher">
+      <property name="show-label" type="bool" value="false"/>
+      <property name="items" type="array">
+        <value type="string" value="17230382281.desktop"/>
+      </property>
     </property>
   </property>
 </channel>

@@ -28,9 +28,16 @@
 
 /* Clock */
 #clock-3 #clock-button {
-    background-color: #2e3440;
+    background-color: transparent;
     margin-top: 4px;
     margin-bottom: 4px;
-    margin-right: 8px;
-    padding: 4px
+    margin-right: 4px;
+    padding: 4px;
+}
+
+/* System monitor button */
+#launcher-6 #launcher-arrow {
+    border-radius: 32px;
+    margin: 4px;
+    background-color: #a3be8c;
 }
