@@ -111,6 +111,10 @@ element-text, element-icon {
     text-color:       inherit;
 }
 
+element-icon {
+    margin: 0 8px 0 0;
+}
+
 button {
     padding: 6px;
     color: @foreground;
