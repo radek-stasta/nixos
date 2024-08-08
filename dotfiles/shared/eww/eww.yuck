@@ -1,3 +1,14 @@
+;; Variables
+(defpoll memory_used
+  :interval "0.5s"
+  "sh ./scripts/memory_used.sh"
+)
+
+(defpoll memory_used_percentage
+  :interval "0.5s"
+  "sh ./scripts/memory_used_percentage.sh"
+)
+
 ;; Graph view widget
 (defwidget graph-view [text value graph-value]
   (box
@@ -14,6 +25,8 @@
       :height 100
       :value graph-value
       :time-range "30s"
+      :thickness 2
+      :line-style "round"
     )
   )
 )
@@ -22,8 +35,8 @@
 (defwidget system-monitor []
   (graph-view
     :text "Memory"
-    :value "${round(EWW_RAM.used_mem / 1000000000, 1)}GiB"
-    :graph-value {EWW_RAM.used_mem_perc}
+    :value "${memory_used}GiB"
+    :graph-value memory_used_percentage
   )
 )
 
