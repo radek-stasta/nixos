@@ -54,11 +54,13 @@
       <property name="items" type="array">
         <value type="string" value="17230382281.desktop"/>
       </property>
+      <property name="disable-tooltips" type="bool" value="true"/>
     </property>
     <property name="plugin-7" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="17230415522.desktop"/>
       </property>
+      <property name="disable-tooltips" type="bool" value="true"/>
     </property>
   </property>
 </channel>

@@ -10,33 +10,46 @@
 )
 
 ;; Graph view widget
-(defwidget graph-view [text value graph-value]
+(defwidget graph-view [text value graph-value line-class]
   (box
+    :class "graph-view-main-box"
     :orientation "v"
     :space-evenly false
     (label
-      :text text
+      :class "graph-view-text"
+      :xalign 0
+      :markup text
     )
     (label
-      :text value
+      :class "graph-view-value"
+      :xalign 0
+      :markup value
     )
-    (graph
-      :width 200
-      :height 100
-      :value graph-value
-      :time-range "30s"
-      :thickness 2
-      :line-style "round"
+    (box
+      :class "graph-view-graph-box"
+      (graph
+        :class line-class
+        :width 200
+        :height 64
+        :value graph-value
+        :time-range "30s"
+        :thickness 2
+        :line-style "round"
+      )
     )
   )
 )
 
 ;; Main widget
 (defwidget system-monitor []
-  (graph-view
-    :text "Memory"
-    :value "${memory_used}GiB"
-    :graph-value memory_used_percentage
+  (box
+    :class "system-monitor-main-box"
+    (graph-view
+      :text "Memory"
+      :value "${memory_used}GiB"
+      :graph-value memory_used_percentage
+      :line-class "color-green"
+    )
   )
 )
 

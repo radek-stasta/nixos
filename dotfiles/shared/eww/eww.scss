@@ -1,0 +1,31 @@
+.color-green {
+  color: #a3be8c;
+}
+
+.system-monitor-main-box {
+  margin: 16px;
+}
+
+.graph-view-main-box {
+  font-family: "Ubuntu Nerd Font", serif;
+  color: #81a1c1;
+  background-color: #2e3440;
+  padding: 16px;
+  border: 2px solid #3b4252;
+  border-radius: 8px;
+}
+
+.graph-view-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.graph-view-value {
+  font-size: 24px;
+}
+
+.graph-view-graph-box {
+  margin-top: 8px;
+  border-top: 1px solid #3b4252;
+  border-bottom: 1px solid #3b4252;
+}
